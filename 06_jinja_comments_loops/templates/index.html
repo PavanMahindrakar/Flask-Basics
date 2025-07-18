@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford University</title>
+</head>
+<body>
+    {# This is a comment in Jinja2 #}
+
+    {% for key in marks.keys() %}
+    <li>The marks of {{key}} is {{marks.get(key)}}</li>
+    {% if marks.get(key) < 80 %}
+    <span>Good effort!</span>
+    {% else %}      
+    <span>Excellent work!</span>
+    {% endif %}
+    
+    
+    {% endfor %}
+
+    
+</body>
+</html>
